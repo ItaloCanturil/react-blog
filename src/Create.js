@@ -17,7 +17,7 @@ const Create = () => {
     fetch('http://localhost:8000/blogs/', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringfy(blog)
+      body: JSON.stringify(blog)
     }).then(() => {
       setIsPending(false)
 
@@ -28,7 +28,7 @@ const Create = () => {
   return (
     <div className="create">
       <h2>Add a New Blog:</h2>
-      <form onSubmit={handleSubmit()}>
+      <form onSubmit={handleSubmit}>
         <label>Add the title</label>
         <input type="text"
           required
